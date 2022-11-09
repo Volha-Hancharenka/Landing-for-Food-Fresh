@@ -1,4 +1,7 @@
-@import "reset";
-@import "fonts";
-@import "header-food";
-@import "about";
+@import "./config/functions";
+@import "./config/mixins";
+@import "./config/variables";
+@import "./config/fonts";
+@import "./reset";
+@import "./header-food";
+@import "./about";
