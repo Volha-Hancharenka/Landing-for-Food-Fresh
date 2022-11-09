@@ -2,6 +2,9 @@
   &__about {
     position: relative;
     top: -240px;
+    @media (max-width: 767px) {
+      top: -80px;
+    }
   }
 }
 .about {
@@ -12,6 +15,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 500px) {
+      padding: 40px 0 ;
+    }
   }
 
   &__title {
@@ -61,28 +67,28 @@ overflow: hidden;
   position: relative;
   display: flex;
 
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    line-height: 150px;
+    color: #303030;
+    text-transform: uppercase;
+    @include adaptiveClamp("font-size", 100, 55, 900, 425, 1);
+    @include adaptiveClamp("line-height", 150, 120, 767, 425, 1);
+  }
   &__title {
+    margin-top: 45px;
     font-size: 30px;
     font-weight: 400;
     line-height: 60px;
     letter-spacing: 0.2em;
     color: #d9d9d9;
-
-    &:before {
-      content: "About";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%);
-      font-size: 100px;
-      font-weight: 900;
-      letter-spacing: 2.5px;
-      //max-width: 351px;
-      color: #303030;
-      text-transform: uppercase;
-    }
-
-    &_about {
-    }
+    @include adaptiveClamp("font-size", 30, 20, 767, 425, 1);
+    @include adaptiveClamp("line-height", 60, 30, 767, 425, 1);
   }
 }
