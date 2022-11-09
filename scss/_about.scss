@@ -3,7 +3,7 @@
     position: relative;
     top: -240px;
     @media (max-width: 767px) {
-      top: -80px;
+      top: -120px;
     }
   }
 }
@@ -15,13 +15,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.102);
+border-radius: 6px;
     @media (max-width: 500px) {
-      padding: 40px 0;
+      padding: 40px 24px;
     }
   }
 
   &__title {
     margin-bottom: 61px;
+    @media (max-width: 500px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__block {
@@ -32,42 +37,85 @@
     text-align: center;
     gap: 90px;
     max-width: 734px;
+    width: 100%;
+
+    @media (max-width: 500px) {
+      gap: 40px;
+    }
   }
 
   &__text {
-    // margin: 0 auto;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
     color: #a6a6a6;
-    //max-width: 734px;
+    @media (max-width: 500px) {
+      line-height: 20px;
+    }
   }
 
   &__image {
     display: flex;
     gap: 34px;
+    @media (max-width: 500px) {
+     flex-direction: column;
+    }
+
     &_one {
+      position: relative;
+      width: 350px;
+      height: 270px;
+      overflow: hidden;
+      max-width: 100%;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
+
+      @include adaptiveClamp("width", 350, 250, 780, 501, 1);
+      @include adaptiveClamp("height", 270, 170, 780, 501, 1);
+      @media (max-width: 500px) {
+        width: 350px;
+        height: 270px;
+       }
+       @media (max-width: 400px) {
+        @include adaptiveClamp("width", 350, 250, 400, 320, 1);
+      @include adaptiveClamp("height", 270, 170, 400, 320, 1);
+       }
       img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
       }
     }
     &_two {
+      max-width: 100%;
+      position: relative;
+      width: 350px;
+      height: 270px;
+      overflow: hidden;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
+      @include adaptiveClamp("width", 350, 250, 780, 501, 1);
+      @include adaptiveClamp("height", 270, 170, 780, 501, 1);
+      @media (max-width: 500px) {
+        width: 350px;
+        height: 270px;
+       }
+       @media (max-width: 400px) {
+        @include adaptiveClamp("width", 350, 250, 400, 320, 1);
+      @include adaptiveClamp("height", 270, 170, 400, 320, 1);
+       }
       img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
       }
     }
-    /*position: relative;
-top: 0;
-left:0;
-overflow: hidden;
-   
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      object-fit: cover;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-    }*/
   }
 }
 .title {
@@ -87,11 +135,10 @@ overflow: hidden;
     color: #303030;
     text-transform: uppercase;
     @include adaptiveClamp("font-size", 100, 55, 900, 425, 1);
-    @include adaptiveClamp("line-height", 150, 120, 767, 425, 1);
+    @include adaptiveClamp("line-height", 150, 130, 767, 425, 1);
   }
   &__title {
     position: relative;
-    margin-top: 45px;
     font-size: 30px;
     font-weight: 400;
     line-height: 60px;
@@ -99,5 +146,8 @@ overflow: hidden;
     color: #d9d9d9;
     @include adaptiveClamp("font-size", 30, 20, 767, 425, 1);
     @include adaptiveClamp("line-height", 60, 30, 767, 425, 1);
+    &_about {
+      margin-top: 45px;
+    }
   }
 }

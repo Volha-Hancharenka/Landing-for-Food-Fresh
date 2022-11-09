@@ -1,0 +1,108 @@
+.page {
+  &__work {
+    margin-top: -150px;
+    margin-bottom: 30px;
+    @media (max-width:767px) {
+      margin-top: -80px;
+    }
+  }
+}
+.work {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__columns {
+    //margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap: 30px;
+  }
+
+  &__card {
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.102);
+    background-color: #252525;
+
+    &_title {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.27px;
+      color: #fff;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 150%;
+        left: 0;
+        display: block;
+        border-bottom: 2px solid #34c759;
+        width: 56px;
+      }
+    }
+    &_title-first {
+      &:before {
+        border-bottom: 2px solid black;
+      }
+    }
+
+    &_text {
+      margin-top: 36px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.16px;
+      color: rgba(255, 255, 255, 0.502);
+    }
+  }
+  &__card-first {
+    background-color: #34c759;
+  }
+}
+.title {
+  &__label {
+    &_work {
+      line-height: 80px;
+
+      letter-spacing: 0.2em;
+    }
+  }
+
+  &__title {
+    &_work {
+      position: relative;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 90px;
+      letter-spacing: 0.2em;
+      @include adaptiveClamp("font-size", 36, 20, 767, 425, 1);
+      @include adaptiveClamp("line-height", 90, 80, 767, 500, 1);
+      @media (max-width:500px) {
+        line-height: 75px;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 125%;
+        left: 50%;
+        transform: translate(-50%);
+        display: block;
+        text-align: center;
+        border-bottom: 2px solid #34c759;
+        width: 60px;
+        height: 2px;
+      }
+    }
+  }
+}
