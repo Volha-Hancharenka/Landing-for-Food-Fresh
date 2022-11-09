@@ -1,7 +1,9 @@
+@use "saas:math";
+@import "./config/fonts";
+@import "./config/variables";
 @import "./config/functions";
 @import "./config/mixins";
-@import "./config/variables";
-@import "./config/fonts";
-@import "./reset";
-@import "./header-food";
+@import "./config/reset";
+@import "./header";
+@import "./food";
 @import "./about";
