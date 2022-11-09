@@ -20,13 +20,11 @@
   }
 
   &__columns {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     gap: 30px;
     @include adaptiveClamp("gap", 30, 15, 1000, 768, 1);
-    @media (max-width: 767px) {
-      grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-    }
   }
 
   &__card {
