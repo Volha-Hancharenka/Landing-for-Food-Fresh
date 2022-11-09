@@ -6,8 +6,8 @@
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 24px;
-    //display: flex;
-    //justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -28,5 +28,33 @@
     &:active {
       color: #34c759;
     }
+  }
+}
+.page {
+
+ 
+
+  &__food {
+  }
+}
+.food {
+  &__container {
+  }
+  &__title {
+  }
+
+  &__btn {
+  }
+
+  &__column {
+  }
+
+  &__item {
+  }
+
+  &__icon {
+  }
+
+  &__text {
   }
 }
