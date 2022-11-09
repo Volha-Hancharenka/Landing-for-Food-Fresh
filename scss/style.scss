@@ -1,28 +1,51 @@
-@import "nule";
+@import "reset";
 @import "fonts";
 
 .header {
+  position: relative;
+  background-color: black;
+  border-bottom: 2px solid rgb(255, 255, 255, 10%);
+
   &__container {
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-bottom: 6px;
+  }
+  &__text {
+    color: #34c759;
+    text-transform: uppercase;
+    margin-left: 9px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
   }
 
   &__menu {
     display: flex;
     gap: 45px;
   }
-
-  &__list {
+}
+.menu {
+  &__link {
     font-size: 14px;
     font-weight: 700;
     line-height: 90px;
     color: #ffffff;
+    transition: all 0.3s ease;
     &:hover,
     &:focus,
     &:active {
@@ -31,22 +54,77 @@
   }
 }
 .page {
-
- 
-
+  background-color: black;
   &__food {
   }
 }
 .food {
+  position: relative;
   &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__title {
+    margin-top: 80px;
+    text-align: center;
+    h1 {
+      text-transform: capitalize;
+      color: #fff;
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 72px;
+      line-height: 84px;
+      letter-spacing: 0.11em;
+      span {
+        font-family: "Roboto", sans-serif;
+        font-size: 72px;
+        font-weight: 300;
+        line-height: 60px;
+        letter-spacing: 0.1em;
+      }
+    }
+    p {
+      margin-top: 16px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.20000000298023224px;
+      max-width: 595px;
+      
+
+      span {
+        text-transform: uppercase;
+      }
+    }
   }
 
   &__btn {
+    margin-top: 40px;
+    height: 72px;
+    background-color: #34c759;
+    border-radius: 43px;
+    padding: 0 58px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid #34c759;
+      color: #fff;
+    }
   }
 
   &__column {
+    display: flex;
+    margin-top: 70px;
+    gap: 90px;
   }
 
   &__item {
