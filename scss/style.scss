@@ -1,0 +1,32 @@
+@import "nule";
+@import "fonts";
+
+.header {
+  &__container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 24px;
+    //display: flex;
+    //justify-content: space-between;
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+    display: flex;
+    gap: 45px;
+  }
+
+  &__list {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #ffffff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #34c759;
+    }
+  }
+}
