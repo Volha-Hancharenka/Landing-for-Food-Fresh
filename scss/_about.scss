@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.102);
-border-radius: 6px;
+    border-radius: 6px;
     @media (max-width: 500px) {
       padding: 40px 24px;
     }
@@ -58,7 +58,7 @@ border-radius: 6px;
     display: flex;
     gap: 34px;
     @media (max-width: 500px) {
-     flex-direction: column;
+      flex-direction: column;
     }
 
     &_one {
@@ -74,11 +74,11 @@ border-radius: 6px;
       @media (max-width: 500px) {
         width: 350px;
         height: 270px;
-       }
-       @media (max-width: 400px) {
+      }
+      @media (max-width: 400px) {
         @include adaptiveClamp("width", 350, 250, 400, 320, 1);
-      @include adaptiveClamp("height", 270, 170, 400, 320, 1);
-       }
+        @include adaptiveClamp("height", 270, 170, 400, 320, 1);
+      }
       img {
         position: absolute;
         top: 50%;
@@ -101,11 +101,11 @@ border-radius: 6px;
       @media (max-width: 500px) {
         width: 350px;
         height: 270px;
-       }
-       @media (max-width: 400px) {
+      }
+      @media (max-width: 400px) {
         @include adaptiveClamp("width", 350, 250, 400, 320, 1);
-      @include adaptiveClamp("height", 270, 170, 400, 320, 1);
-       }
+        @include adaptiveClamp("height", 270, 170, 400, 320, 1);
+      }
       img {
         position: absolute;
         top: 50%;
@@ -121,13 +121,31 @@ border-radius: 6px;
 .title {
   text-align: center;
   position: relative;
+  height: 80px;
   display: flex;
+  flex-direction: column;
+  &:before {
+    content: "";
+    position: absolute;
+   bottom: -14px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #34c759;
+    width: 60px;
+    height: 2px;
+  }
+  &.about__title {
+    &::before {
+      display: none;
+    }
+  }
 
   &__label {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
+    line-height: 80px;
     font-size: 100px;
     font-weight: 900;
     letter-spacing: 2.5px;
@@ -141,7 +159,7 @@ border-radius: 6px;
     position: relative;
     font-size: 30px;
     font-weight: 400;
-    line-height: 60px;
+    line-height: 80px;
     letter-spacing: 0.2em;
     color: #d9d9d9;
     @include adaptiveClamp("font-size", 30, 20, 767, 425, 1);

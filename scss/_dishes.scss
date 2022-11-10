@@ -8,14 +8,15 @@
   }
 
   &__title {
-    flex-direction: column;
+   
     
   }
 
   &__catalog-food {
+    gap: 30px;
     margin-top: 90px;
     display: grid;
-    grid-template-columns: repeat(auto-fill minmax(350px, 1fr)) ;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) ;
   }
 
   &__card-food {
@@ -26,12 +27,15 @@
 }
 .title {
   
+  
   &__label {
+   
     &_dishes {
     }
   }
 
   &__title {
+   
     &_dishes {
       //margin-top: 5%;
       position: relative;
@@ -44,18 +48,7 @@
       @media (max-width: 500px) {
         line-height: 75px;
       }
-      &:before {
-        content: "";
-        position: absolute;
-        top: 125%;
-        left: 50%;
-        transform: translate(-50%);
-        display: block;
-        text-align: center;
-        background-color: #34c759;
-        width: 60px;
-        height: 2px;
-      }
+      
     }
   }
 }
