@@ -51,6 +51,8 @@
   display: flex;
   flex-direction: column;
   background-color: #252525;
+  overflow: hidden;
+  border-radius: 5px;
 
   &__img {
     position: relative;
@@ -91,6 +93,7 @@
     line-height: 18px;
     color: #85878c;
     letter-spacing: -0.16px;
+    
   }
 
   &__actions {
@@ -124,5 +127,11 @@
     height: 40px;
     border-radius: 50%;
     background-color: rgba(37, 37, 37, 0.3);
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid #fff;
+    }
   }
 }
