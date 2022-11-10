@@ -1,0 +1,114 @@
+.page {
+  &__dishes {
+  }
+}
+.dishes {
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__catalog-food {
+    margin-top: 59px;
+    display: grid;
+    grid-template-columns: minmax(350, 1fr), repeat(auto-fill);
+  }
+
+  &__card-food {
+   
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.102);
+
+  }
+}
+.title {
+  &__label {
+    &_dishes {
+    }
+  }
+
+  &__title {
+    &_dishes {
+    }
+  }
+}
+.card-food {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  //height: 493px;
+  //border-radius: 6px;
+ 
+
+  &__img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 260px;
+    img {
+      @include img;
+    }
+  }
+  &__block-text {
+    padding: 30px;
+    background-color: #252525;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #d9d9d9;
+  }
+
+  &__description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #a4a8b2;
+    letter-spacing: -0.15px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #85878c;
+    letter-spacing: -0.16px;
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  &__rating {
+  }
+
+  &__button {
+    height: 40px;
+    border-radius: 30px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  &__button-share {
+    position: absolute;
+    top: 5%;
+    right:5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(37, 37, 37, 0.3);
+  }
+}

@@ -59,7 +59,6 @@
   &__btn {
     margin-top: 40px;
     height: 72px;
-    background-color: #34c759;
     border-radius: 43px;
     padding-left: 58px;
     padding-right: 58px;
@@ -67,24 +66,13 @@
     font-weight: 700;
     line-height: 22px;
     letter-spacing: 0.2em;
-    color: #1a1a1a;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
-
     @include adaptiveClamp("height", 72, 50, 767, 425, 1);
     @include adaptiveClamp("padding-left", 58, 35, 767, 425, 1);
     @include adaptiveClamp("padding-right", 58, 35, 767, 425, 1);
     @media (max-width: 500px) {
       font-size: 16px;
     }
-    &:hover,
-    &:focus,
-    &:active {
-      
-      color: #fff;
-    }
   }
-
   &__column {
     display: flex;
     margin-top: 70px;
@@ -115,8 +103,7 @@
 
     & svg {
       path {
-        fill:  rgba(255, 255, 255, 0.502);
-
+        fill: rgba(255, 255, 255, 0.502);
       }
     }
   }
@@ -135,5 +122,18 @@
       //line-height: 60px;
       color: rgb(255, 255, 255, 50%);
     }
+  }
+}
+.btn-all {
+  background-color: #34c759;
+
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
   }
 }
