@@ -4,13 +4,16 @@
 }
 .dishes {
   &__container {
+    margin-top: 90px;
   }
 
   &__title {
+    flex-direction: column;
+    
   }
 
   &__catalog-food {
-    margin-top: 59px;
+    margin-top: 90px;
     display: grid;
     grid-template-columns: repeat(auto-fill minmax(350px, 1fr)) ;
   }
@@ -22,6 +25,7 @@
   }
 }
 .title {
+  
   &__label {
     &_dishes {
     }
@@ -29,6 +33,29 @@
 
   &__title {
     &_dishes {
+      //margin-top: 5%;
+      position: relative;
+      font-size: 36px;
+      font-weight: 400;
+      //line-height: 90px;
+      letter-spacing: 0.2em;
+      @include adaptiveClamp("font-size", 36, 20, 767, 425, 1);
+      @include adaptiveClamp("line-height", 90, 80, 767, 500, 1);
+      @media (max-width: 500px) {
+        line-height: 75px;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 125%;
+        left: 50%;
+        transform: translate(-50%);
+        display: block;
+        text-align: center;
+        background-color: #34c759;
+        width: 60px;
+        height: 2px;
+      }
     }
   }
 }
@@ -42,12 +69,17 @@
 
   &__img {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 350px;
-    height: 260px;
+    //width: 350px;
+    //height: 260px;
+    overflow: hidden;
+    padding-bottom: prc(260px, 350px);
     img {
-      @include img;
+      position: absolute;
+      top:0;
+      left:0;
+      object-fit: cover;
+      width:100%;
+      height: 100%;
     }
   }
   &__block-text {
