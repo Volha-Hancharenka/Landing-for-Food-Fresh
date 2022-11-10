@@ -163,9 +163,9 @@
     letter-spacing: 0.2em;
     color: #d9d9d9;
     @include adaptiveClamp("font-size", 30, 20, 767, 425, 1);
-    @include adaptiveClamp("line-height", 60, 30, 767, 425, 1);
+    //@include adaptiveClamp("line-height", 60, 30, 767, 425, 1);
     &_about {
-      margin-top: 45px;
+     // margin-top: 45px;
     }
   }
 }
