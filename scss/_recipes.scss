@@ -32,7 +32,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-   
+    @media (max-width:1000px) {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 
   &__image-block {
@@ -41,9 +44,7 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
-    @media (max-width:1000px) {
-     
-    }
+    
   }
 
   &__recipes-block {
@@ -153,6 +154,7 @@
   }
 
   &__views {
+     align-items:center;
     &_third {
       span {
         color: #1a1a1a;
@@ -162,6 +164,8 @@
 
   &__icon {
     &_third {
+      width: 26px;
+      height: 26px;
        svg {
         path {
           fill: #191919;
@@ -171,7 +175,9 @@
   }
 
   &__comments {
+    align-items:center;
     &_third {
+     
       span {
         color: #1a1a1a;
       }
@@ -181,8 +187,8 @@
   &__image {
     position: relative;
     overflow: hidden;
-    width: 540px;
-    height: 150px;
+    max-width: 540px;
+    height: 100%;
     img {
       position: absolute;
       top: 0;
