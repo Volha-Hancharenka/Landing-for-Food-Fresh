@@ -32,6 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+   
   }
 
   &__image-block {
@@ -40,6 +41,9 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 4;
+    @media (max-width:1000px) {
+     
+    }
   }
 
   &__recipes-block {
@@ -100,6 +104,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
   }
   &__text {
     font-size: 16px;
@@ -147,20 +153,28 @@
   }
 
   &__views {
-    span {
-      color: #1a1a1a;
+    &_third {
+      span {
+        color: #1a1a1a;
+      }
     }
   }
 
   &__icon {
     &_third {
-      color: #191919;
+       svg {
+        path {
+          fill: #191919;
+        }
+      }
     }
   }
 
   &__comments {
-    span {
-      color: #1a1a1a;
+    &_third {
+      span {
+        color: #1a1a1a;
+      }
     }
   }
 
@@ -209,6 +223,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
   }
 
   &__food-time {
@@ -228,8 +244,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 40px;
-
-   
+    max-width: 360px;
   }
 
   &__author {
@@ -255,8 +270,8 @@
 
   &__share {
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: prc(30, 540);
+    right: prc(30, 540);
     display: flex;
     justify-content: center;
     align-items: center;
