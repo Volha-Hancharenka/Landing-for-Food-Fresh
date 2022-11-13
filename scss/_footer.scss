@@ -10,7 +10,7 @@
     display: flex;
     gap: 90px;
     margin-bottom: 30px;
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
       flex-direction: column;
       gap: 40px;
     }
@@ -23,7 +23,10 @@
   }
 
   &__text {
-    &_big {
+    &_big-text {
+      &:hover {
+        color: #34c759;
+      }
     }
 
     &_small {
@@ -31,7 +34,7 @@
   }
 
   &__end {
-   margin-top: 30px;
+    margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -39,7 +42,6 @@
     text-align: center;
     align-items: center;
     gap: 10px;
-    
   }
 
   &__logo {
@@ -68,4 +70,13 @@
 .icon-logo {
 }
 .logo-text {
+}
+.footer__icon-svg {
+  & svg {
+    &:hover {
+      path {
+        fill: rgba(255, 255, 255, 0.502);
+      }
+    }
+  }
 }

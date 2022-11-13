@@ -40,6 +40,7 @@
 .logo-text {
   color: #34c759;
   text-transform: uppercase;
+  font-weight: 600;
   margin-left: 9px;
   transition: all 0.3s ease;
   &:hover,
@@ -54,6 +55,11 @@
 .menu {
   @media (max-width:620px){
     display: none;
+  &.active {
+   
+    top: 0;
+    
+  }
   }
   &__link {
     font-size: 14px;

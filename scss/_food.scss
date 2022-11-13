@@ -6,7 +6,7 @@
 .food {
   position: relative;
 
-  background: url(../images/food/bg-image.png) no-repeat 0 0/cover;
+  background: url(../images/food/bg-image.png) no-repeat 0 0 / cover;
   background-attachment: fixed;
   &__container {
     display: flex;
@@ -90,6 +90,11 @@
   }
 
   &__text {
+    &_big-text {
+      &:hover {
+        color: #34c759;
+      }
+    }
   }
 }
 .column-food {
@@ -119,6 +124,7 @@
   & svg {
     path {
       fill: rgba(255, 255, 255, 0.502);
+      transition: all 0.3s ease;
     }
     &:hover {
       path {
@@ -129,12 +135,15 @@
 }
 .text-food {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .text-big {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
+  transition: all 0.3s ease;
 }
 .text-small {
   font-size: 14px;
@@ -152,5 +161,14 @@
   &:focus,
   &:active {
     color: #fff;
+  }
+}
+.food__icon-svg {
+  & svg {
+    &:hover {
+      path {
+        fill: rgba(255, 255, 255, 0.502);
+      }
+    }
   }
 }
