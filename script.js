@@ -16,3 +16,4 @@ function setburgerMenu() {
     header.classList.toggle('active')
   })
 }
+setburgerMenu()
