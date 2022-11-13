@@ -46,6 +46,7 @@
   }
 
   &__image-block {
+    overflow: hidden;
     position: relative;
     grid-column-start: 1;
     grid-column-end: 2;
