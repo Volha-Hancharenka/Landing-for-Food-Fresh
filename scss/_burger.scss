@@ -14,16 +14,17 @@
     &.active {
       span {
         transform: scale(0);
-      }
-      &::before {
-        transform: rotate(45deg);
-        top: 50%;
-        background-color: rgba(255, 255, 255, 0.7);
-      }
-      &::after {
-        transform: rotate(-45deg);
-        bottom: 50%;
-        background-color: rgba(255, 255, 255, 0.7);
+
+        &::before {
+          transform: translate(-50%), rotate(45deg);
+          top: 50%;
+          //background-color: rgba(255, 255, 255, 0.7);
+        }
+        &::after {
+          transform: translate(-50%), rotate(-45deg);
+          bottom: 50%;
+          //background-color: rgba(255, 255, 255, 0.7);
+        }
       }
     }
     span {
