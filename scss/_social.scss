@@ -211,12 +211,12 @@
 .network__body.network__body_img {
   &::-webkit-scrollbar {
     width: 5px;
-    background-color: #767373;
+    background-color: rgba(118, 115, 115, 0.2);
   }
   
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: black;
+    background-color: #000000;
     transition: all 280ms ease-in-out;
    
   }
