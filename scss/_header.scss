@@ -14,22 +14,13 @@
   }
 
   &__logo {
-    display: flex;
-    align-items: center;
+    
   }
   &__icon {
-    margin-bottom: 6px;
+   
   }
   &__text {
-    color: #34c759;
-    text-transform: uppercase;
-    margin-left: 9px;
-    transition: all 0.3s ease;
-    &:hover,
-    &:focus,
-    &:active {
-      color: #fff;
-    }
+   
   }
 
   &__menu {
@@ -37,6 +28,24 @@
     gap: 45px;
    
   }
+}
+.logo {
+  display: flex;
+    align-items: center;
+}
+.logo-text {
+  color: #34c759;
+  text-transform: uppercase;
+  margin-left: 9px;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+}
+.icon-logo {
+  margin-bottom: 6px;
 }
 .menu {
   @media (max-width:620px){

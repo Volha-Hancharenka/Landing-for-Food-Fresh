@@ -74,67 +74,74 @@
     }
   }
   &__column {
-    display: flex;
     margin-top: 70px;
-    gap: 90px;
     margin-bottom: 401px;
     @media (max-width: 767px) {
-      flex-direction: column;
       margin-bottom: 200px;
-      gap: 40px;
     }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 245px;
   }
 
   &__icon {
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-
-    & svg {
-      path {
-        fill: rgba(255, 255, 255, 0.502);
-
-      }
-      &:hover {
-        path {
-          fill: rgba(175, 42, 42, 0.502);
-  
-        }
-      }
-    }
   }
 
   &__text {
-    text-align: center;
-    &_big {
-      color: #fff;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 30px;
+  }
+}
+.column-food {
+  display: flex;
+  gap: 90px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.item-food {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 245px;
+}
+.icon-info {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+
+  & svg {
+    path {
+      fill: rgba(255, 255, 255, 0.502);
     }
-    &_small {
-      font-size: 14px;
-      font-weight: 400;
-      //line-height: 60px;
-      color: rgb(255, 255, 255, 50%);
+    &:hover {
+      path {
+        fill: rgba(175, 42, 42, 0.502);
+      }
     }
   }
 }
+.text-food {
+  text-align: center;
+}
+.text-big {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.text-small {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255, 50%);
+}
+
 .btn-all {
   background-color: #34c759;
-
   color: #1a1a1a;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.251);

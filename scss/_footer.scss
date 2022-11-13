@@ -1,0 +1,71 @@
+.footer {
+  background-color: #252525;
+  padding-top: 30px;
+
+  &__column {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #303030;
+  }
+  &__container {
+    display: flex;
+    gap: 90px;
+    margin-bottom: 30px;
+    @media (max-width:767px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+  }
+
+  &__icon {
+  }
+
+  &__text {
+    &_big {
+    }
+
+    &_small {
+    }
+  }
+
+  &__end {
+   margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    
+  }
+
+  &__logo {
+  }
+
+  &__author {
+    font-size: 12px;
+    font-weight: 400;
+    color: #737373;
+  }
+}
+.column-food {
+}
+.item-food {
+}
+.icon-info {
+}
+.text-food {
+}
+.text-big {
+}
+.text-small {
+}
+.logo {
+}
+.icon-logo {
+}
+.logo-text {
+}
