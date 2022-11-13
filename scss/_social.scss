@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
@@ -32,8 +32,6 @@
       font-size: 36px;
       letter-spacing: 0.2em;
       @include adaptiveClamp("font-size", 36, 20, 767, 425, 1);
-    
-
     }
   }
 }
@@ -44,7 +42,6 @@
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-
   }
 
   &__header {
@@ -82,7 +79,7 @@
     &:hover,
     &:focus,
     &:active {
-     border-color: #fff;
+      border-color: #fff;
     }
   }
 
@@ -137,8 +134,9 @@
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       position: relative;
       width: 100%;
-     
-      flex: 1 1 auto; 
+      height: 240px;
+      overflow-y: auto;
+      flex: 1 1 auto;
     }
 
     &_third-card {
@@ -182,11 +180,10 @@
   }
 
   &__img {
-    
     overflow: hidden;
     width: 100%;
-    height: 100%;
-    img { 
+    height: 120px;
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -210,4 +207,17 @@
 .btn-all {
 }
 .icon-share {
+}
+.network__body.network__body_img {
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #767373;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: black;
+    transition: all 280ms ease-in-out;
+   
+  }
 }

@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 90px;
   }
 
   &__logo {
@@ -34,9 +35,13 @@
   &__menu {
     display: flex;
     gap: 45px;
+   
   }
 }
 .menu {
+  @media (max-width:620px){
+    display: none;
+  }
   &__link {
     font-size: 14px;
     font-weight: 700;
