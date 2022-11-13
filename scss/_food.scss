@@ -2,7 +2,8 @@
  background-color: #1A1A1A;
   &__food {
     position: relative;
-    background: url(../images/food/bg-image.png) no-repeat center;
+    background: url(../images/food/bg-image.png) no-repeat  cover;
+    background-attachment: fixed;
   }
 }
 .food {
