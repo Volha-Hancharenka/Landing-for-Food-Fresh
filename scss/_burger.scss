@@ -1,8 +1,8 @@
 .header__burger {
   display: none;
   @media (max-width: 620px) {
-    width: 33px;
-    height: 33px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.7);
@@ -13,22 +13,23 @@
     z-index: 5;
 
     &.active {
-      
+      position: fixed;
+      right: 24px;
       span {
         transform: scale(0);
-
-        &::before {
-          transform:translate(-50%) rotate(45deg);
-          //top: 6px;
-          // background-color: rgba(255, 255, 255, 0.7);
-        }
-        &::after {
-          transform: translate(-50%) rotate(-45deg);
-          //left: 25%;
-          //background-color: rgba(255, 255, 255, 0.7);
-        }
+      }
+      &::before {
+        transform: translate(-50%) rotate(45deg);
+        top: 50%;
+        background-color: #fff;
+      }
+      &::after {
+        transform: translate(-50%) rotate(-45deg);
+        top: 50%;
+        background-color: #fff;
       }
     }
+
     span {
       position: absolute;
       top: 50%;
@@ -47,12 +48,12 @@
       background-color: rgba(255, 255, 255, 0.7);
     }
     &::after {
-      top: 6px;
+      top: 7px;
       left: 50%;
       transform: translate(-50%);
     }
     &::before {
-      bottom: 6px;
+      bottom: 7px;
       left: 50%;
       transform: translate(-50%);
     }
