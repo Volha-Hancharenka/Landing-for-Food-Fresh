@@ -41,10 +41,10 @@
           <span></span>
         </button>
         <nav class="header__menu menu">
-          <a class="menu__link" href="#">Menu</a>
-          <a class="menu__link" href="#">Recipes</a>
-          <a class="menu__link" href="#">Chefs</a>
-          <a class="menu__link" href="#">Contacts</a>
+          <a class="menu__link" href="#menu">Menu</a>
+          <a class="menu__link" href="#recipes">Recipes</a>
+          <a class="menu__link" href="#chefs">Chefs</a>
+          <a class="menu__link" href="#contacts">Contacts</a>
         </nav>
       </div>
     </header>
@@ -150,7 +150,7 @@
           </div>
         </div>
       </section>
-      <section class="page__dishes dishes">
+      <section class="page__dishes dishes" id="menu">
         <div class="dishes__container">
           <div class="dishes__title title">
             <span class="title__label title__label_dishes">Dishes</span>
@@ -169,19 +169,18 @@
                   Tender crisp patty and more...</p>
               </div>
               <div class="card-food__actions">
-                <div class="card-food__rating rating">
-                  <div class="rating__items">
-                    <input id="rating__item_5" type="radio" value="5" class="rating__item" name="rating">
-                    <label for="rating__item_5" class="rating__label"></label>
-                    <input id="rating__item_4" type="radio" value="4" class="rating__item" checked name="rating">
-                    <label for="rating__item_4" class="rating__label"></label>
-                    <input id="rating__item_3" type="radio" value="3" class="rating__item" name="rating">
-                    <label for="rating__item_3" class="rating__label"></label>
-                    <input id="rating__item_2" type="radio" value="2" class="rating__item" name="rating">
-                    <label for="rating__item_2" class="rating__label"></label>
-                    <input id="rating__item_1" type="radio" value="1" class="rating__item" name="rating">
-                    <label for="rating__item_1" class="rating__label"></label>
+                <div class="card-food__rating rating-star rating-star_set">
+                  <div class="rating-star__body">
+                    <div class="rating-star__active"></div>
+                    <div class="rating-star__items">
+                      <input type="radio" name="rating-star" value="1" class="rating-star__item">
+                      <input type="radio" name="rating-star" value="2" class="rating-star__item">
+                      <input type="radio" name="rating-star" value="3" class="rating-star__item">
+                      <input type="radio" name="rating-star" value="4" class="rating-star__item">
+                      <input type="radio" name="rating-star" value="5" class="rating-star__item">
+                    </div>
                   </div>
+                  <div class="rating-star__value">3.6</div>
                 </div>
                 <button class="card-food__button btn-all">Order</button>
                 <button class="card-food__button-share">
@@ -407,7 +406,7 @@
           </div>
         </div>
       </section>
-      <section class="page__chefs chefs">
+      <section class="page__chefs chefs" id="chefs">
         <div class="chefs__container">
           <div class="chefs__title title">
             <span class="title__label title__label_chefs">Chefs</span>
@@ -484,7 +483,7 @@
           </div>
         </div>
       </section>
-      <section class="page__recipes recipes">
+      <section class="page__recipes recipes" id="recipes">
         <div class="recipes__container">
           <div class="recipes__title title">
             <span class="title__label title__label_recipes">Recipes</span>
@@ -635,7 +634,7 @@
           </div>
         </div>
       </section>
-      <section class="page__social social">
+      <section class="page__social social" id="contacts">
         <div class="social__container">
           <div class="social__title title">
             <span class="title__label title__label_social">Social</span>
